@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+        <h2>SIGN UP</h2>
+        <label for="">Name</label>
+        <input type="text" formControlName="name" id="" required>
+        <span *ngIf="!form.get('name')?.valid && !form.get('name')?.untouched">Name must be valid</span>
+        <label for="">Email</label>
+        <input type="text" formControlName="email" id="" required>
+        <span *ngIf="!form.get('email')?.valid && !form.get('email')?.untouched">Email must be valid</span>
+        <label for="">Password</label>
+        <input type="password" formControlName="password" required>
+        <span *ngIf="!form.get('password')?.valid && !form.get('password')?.untouched">Password must have 8
+            Characters</span>
+        <span>{{errorMessage}}</span>
+        <input type="submit" id="" [disabled]="form.invalid">
+    </form>
+</div>

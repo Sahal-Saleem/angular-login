@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../src/assets/bg-cover.jpg');
+    background-size: cover; /* This ensures the image covers the entire body */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    font-family: 'Century Gothic', sans-serif;
+}

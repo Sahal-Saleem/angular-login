@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="side-bar">
+        <h2>Log Me IN</h2>
+        <h4>ADMIN</h4>
+        <hr>
+        <ul>
+            <li><i class="fa fa-user"></i> User</li>
+            <li (click)="logout()"><i class="fa fa-sign-out"></i> Logout</li>
+        </ul>
+    </div>
+    <div class="logout">
+        <h2>Admin/User Management</h2>
+        <div class="search">
+            <i class="fa fa-search"></i>
+            <input type="search" [formControl]="search" id="userSearchInput" placeholder="Search">
+        </div>
+    </div>
+
+    <div class="table">
+        <table>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <tbody>
+                <ng-container *ngFor="let user of users$ | async">
+                    <tr>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td><i class="fa fa-edit"></i></td>
+                        <td><i class="fa fa-trash" (click)="removeUser(user._id)"></i></td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>

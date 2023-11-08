@@ -1,0 +1,42 @@
+.container {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%
+}
+
+.container h1 {
+    color: white;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 0
+}
+
+.container p {
+    margin-top: 0;
+    color: #ffffffa3;
+}
+
+.container button {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px white solid;
+    color: white;
+    background-color: #1d294278;
+}
+
+.container button:hover {
+    background-color: #FFF;
+    color: #34559a;
+    text-decoration: none;
+}

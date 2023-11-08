@@ -1,0 +1,101 @@
+/* Reset some default styles */
+ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Style the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #00000000;
+    /* Background color for the navbar */
+    color: #fff;
+    /* Text color for the links */
+    top: 0;
+    /* Stick it to the top of the viewport */
+    width: auto;
+    /* Full width */
+    z-index: 100;
+    /* Ensure it appears above other content */
+}
+
+.title {
+    margin-left: 30px;
+}
+
+/* Style the navigation list */
+.nav-list {
+    list-style: none;
+    /* Remove list bullets */
+    display: flex;
+    /* Display the list items in a row */
+    justify-content: end;
+    /* Evenly distribute items horizontally */
+    /* Add some padding to the top and bottom */
+    align-items: center;
+}
+
+/* Style the navigation items */
+
+.nav-item a {
+    padding-right: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    /* Remove underlines from links */
+    color: #8ba5bc;
+    /* Text color for the links */
+    font-size: large;
+    transition: background-color 0.3s ease;
+    /* Add a smooth transition effect */
+    text-transform: uppercase;
+}
+
+/* Change the link background color on hover */
+.nav-item a:hover {
+    color: #898989;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+hr {
+    position: absolute;
+    width: 0;
+    /* Start with zero width */
+    height: 2px;
+    margin: 0 auto;
+    top: 100%;
+    right: 0;
+    border: none;
+    transform: scaleX(0);
+    /* Scale horizontally to zero initially */
+    transform-origin: center;
+}
+
+.active hr {
+    position: relative;
+    border: none;
+    width: 77%;
+    background: #c9dfec;
+    transition: all 0.5s ease-out;
+    transform: scaleX(1);
+    /* Scale horizontally to full width when active */
+}
+
+/* Adjust the hr position on hover */
+
+.active a {
+    color: #FFF;
+}

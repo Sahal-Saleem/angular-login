@@ -1,0 +1,54 @@
+.container {
+    width: 300px;
+    height:auto; /* Set a fixed height, if needed */
+    background-color: rgb(255 255 255 / 29%);
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+}
+form{
+    display: grid;  
+}
+input[type = "email"]{
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+}
+input[type = "password"]{
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+}
+input[type = "submit"]{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 8px;
+    border: none;
+    color: white;
+    background-color: #1d294278;
+}
+input[type = "submit"]:hover{
+    font-weight: bold;
+    color:#1d2942c0;
+    background-color: #f6f6f678;
+}
+.container h2 {
+    text-align: center;
+    color: white;
+}
+::ng-deep input.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+span{
+    color: rgb(142, 0, 0);
+    text-align: center;
+    font-size: 15px;
+}

@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <h1 class="title">{{title}}</h1>
+  <ul class="nav-list">
+    <li [routerLinkActive]="'active'" class="nav-item" [routerLinkActiveOptions]="{exact :true}"><a
+        routerLink="/">Home</a>
+      <hr>
+    </li>
+    <li [routerLinkActive]="'active'" class="nav-item"><a routerLink="/profile">Profile </a>
+      <hr>
+    </li>
+    <li [routerLinkActive]="'active'" class="nav-item" *ngIf="isLoggedIn(); else loginSignup"><a href="#"
+        (click)="logout()">Logout </a>
+      <hr>
+    </li>
+    <ng-template #loginSignup>
+      <li [routerLinkActive]="'active'" class="nav-item"><a routerLink="/login">Login </a>
+        <hr>
+      </li>
+      <li [routerLinkActive]="'active'" class="nav-item"><a routerLink="/signup">Signup </a>
+        <hr>
+      </li>
+    </ng-template>
+  </ul>
+</nav>
